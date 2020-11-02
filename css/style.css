@@ -72,7 +72,7 @@ body {
   padding: 20px;
   margin-left: 20px;
   background: #fff;
-  box-shadow: 1px 0 15px #e8e8e8, -1px 0 15px #e8e8e8;
+  box-shadow: 1px 0 0 #e8e8e8, -1px 0 0 #e8e8e8;
 }
 
 .content_items_item_img {
@@ -122,12 +122,41 @@ body {
   color: #5f5f5f;
 }
 
+.promo {
+  background: url(../upload/phones.jpg) no-repeat;
+}
+
+.promo_items {
+  width: 460px;
+  margin: 40px 0 52px;
+}
+
+.promo_items_item_title {
+  color: #2e2e2e;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 35px 0 25px;
+}
+
+.promo_items_item_title span {
+  font-weight: normal;
+}
+
+.promo_items_item_text {
+  color: #5e5e5e;
+  font-size: 14px;
+  line-height: 20px;
+}
+
 @media screen and (max-width: 1020px) {
   .content_items {
     flex-wrap: wrap;
   }
   .content_items_item {
     margin-bottom: 50px;
+  }
+  .promo {
+    background: #fff;
   }
 }
 
@@ -141,10 +170,23 @@ body {
   .margin_left {
     margin-left: 30px;
   }
+  .content_items {
+    margin-left: 0;
+    justify-content: center;
+  }
   .content_items_item {
     margin-bottom: 30px;
   }
   .content_button {
     margin: 0px 0 100px 0
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .content_button {
+    margin-bottom: 40px;
+  }
+  .promo_items {
+    width: 100%;
   }
 }
