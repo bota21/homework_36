@@ -5,6 +5,7 @@ body {
 
 * {
   box-sizing: border-box;
+  outline: none;
 }
 
 .container {
@@ -29,19 +30,22 @@ body {
   line-height: 30px;
 }
 
-.header_button {
-  width: 140px;
-  height: 54px;
+.button {
   border: none;
   background: #f12078;
   color: #fff;
   font-style: 18px;
   font-weight: 700;
-  margin: 39px 0 180px 0;
   box-shadow: 0 1px 1px #383433, -1px 0 1px #625047;
 }
 
-.header_button:hover {
+.header_button {
+  width: 140px;
+  height: 54px;
+  margin: 39px 0 180px 0;
+}
+
+.button:hover {
   opacity: 0.8;
 }
 
@@ -49,8 +53,98 @@ body {
   margin-left: 560px;
 }
 
+.content_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content_items {
+  position: relative;
+  top: -44px;
+  margin-left: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content_items_item {
+  width: 220px;
+  padding: 20px;
+  margin-left: 20px;
+  background: #fff;
+  box-shadow: 1px 0 15px #e8e8e8, -1px 0 15px #e8e8e8;
+}
+
+.content_items_item_img {
+  filter: contrast(0.4);
+}
+
+.content_items_item_title {
+  font-style: 16px;
+  color: #c6c6c6;
+  border-bottom: 2px solid #c6c6c6;
+  padding: 14px 0;
+  font-weight: 700;
+}
+
+.content_items_item_title span {
+  font-weight: normal;
+}
+
+.content_items_item_text {
+  font-size: 12px;
+  line-height: 16px;
+  color: #8e8e8e;
+  padding-top: 15px;
+}
+
+.content_button {
+  width: 168px;
+  height: 53px;
+  margin: 49px 0 0 0;
+}
+
+.content_items_item:hover {
+  top: -63px;
+  position: relative;
+}
+
+.content_items_item:hover .content_items_item_img {
+  filter: none;
+}
+
+.content_items_item:hover .content_items_item_title {
+  color: #171717;
+  border-bottom: 2px solid #f5227d;
+}
+
+.content_items_item:hover .content_items_item_text {
+  color: #5f5f5f;
+}
+
+@media screen and (max-width: 1020px) {
+  .content_items {
+    flex-wrap: wrap;
+  }
+  .content_items_item {
+    margin-bottom: 50px;
+  }
+}
+
 @media screen and (max-width: 950px) {
+  .container {
+    width: 80%;
+  }
+  .header {
+    background: url(../upload/hand-small.jpg) no-repeat;
+  }
   .margin_left {
     margin-left: 30px;
+  }
+  .content_items_item {
+    margin-bottom: 30px;
+  }
+  .content_button {
+    margin: 0px 0 100px 0
   }
 }
