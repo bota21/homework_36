@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @font-face {
   font-family: "HelveticaNeue-light";
   src: url("../font/HelveticaNeueCyr-Light.ttf") format("ttf"),
@@ -8,7 +15,8 @@ body {
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   outline: none;
 }
 
@@ -38,9 +46,10 @@ body {
   border: none;
   background: #f12078;
   color: #fff;
-  font-style: 18px;
+  font-size: 18px;
   font-weight: 700;
-  box-shadow: 0 1px 1px #383433, -1px 0 1px #625047;
+  -webkit-box-shadow: 0 1px 1px #383433, -1px 0 1px #625047;
+          box-shadow: 0 1px 1px #383433, -1px 0 1px #625047;
 }
 
 .header_button {
@@ -58,17 +67,28 @@ body {
 }
 
 .content_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .content_items {
   position: relative;
   top: -44px;
   margin-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .content_items_item {
@@ -76,15 +96,17 @@ body {
   padding: 20px;
   margin-left: 20px;
   background: #fff;
-  box-shadow: 1px 0 0 #e8e8e8, -1px 0 0 #e8e8e8;
+  -webkit-box-shadow: 1px 0 0 #e8e8e8, -1px 0 0 #e8e8e8;
+          box-shadow: 1px 0 0 #e8e8e8, -1px 0 0 #e8e8e8;
 }
 
 .content_items_item_img {
-  filter: contrast(0.4);
+  -webkit-filter: contrast(0.4);
+          filter: contrast(0.4);
 }
 
 .content_items_item_title {
-  font-style: 16px;
+  font-size: 16px;
   color: #c6c6c6;
   border-bottom: 2px solid #c6c6c6;
   padding: 14px 0;
@@ -117,7 +139,8 @@ body {
 }
 
 .content_items_item:hover .content_items_item_img {
-  filter: none;
+  -webkit-filter: none;
+          filter: none;
 }
 
 .content_items_item:hover .content_items_item_title {
@@ -159,7 +182,8 @@ body {
 
 @media screen and (max-width: 1020px) {
   .content_items {
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .content_items_item {
     margin-bottom: 50px;
@@ -171,8 +195,12 @@ body {
 
 .footer_container {
   border-top: 2px solid #1d1e22;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .footer_item {
@@ -205,7 +233,9 @@ body {
   }
   .content_items {
     margin-left: 0;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .content_items_item {
     margin-bottom: 30px;
@@ -223,6 +253,9 @@ body {
     width: 100%;
   }
   .footer_container {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
